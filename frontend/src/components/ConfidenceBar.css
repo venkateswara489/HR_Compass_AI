@@ -1,0 +1,35 @@
+/* ConfidenceBar.css */
+.conf-wrap {
+  margin-top: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+.conf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.conf-label {
+  font-size: 0.7rem;
+  color: var(--clr-text-faint);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.conf-pct {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+.conf-track {
+  height: 5px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--r-full);
+  overflow: hidden;
+}
+.conf-fill {
+  height: 100%;
+  border-radius: var(--r-full);
+  box-shadow: 0 0 8px currentColor;
+}

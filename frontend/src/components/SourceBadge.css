@@ -1,0 +1,27 @@
+/* SourceBadge.css */
+.source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--r-full);
+  background: rgba(108,99,255,0.14);
+  border: 1px solid rgba(108,99,255,0.35);
+  color: var(--clr-violet);
+  font-size: 0.72rem;
+  font-weight: 500;
+  max-width: 200px;
+}
+.source-badge-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+.source-badge-page {
+  background: rgba(108,99,255,0.25);
+  border-radius: var(--r-full);
+  padding: 0 0.35rem;
+  font-size: 0.65rem;
+  white-space: nowrap;
+}

@@ -1,0 +1,116 @@
+/* ChatPage.css */
+.chat-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main area */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Top bar */
+.chat-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem var(--sp-lg);
+  border-bottom: 1px solid var(--clr-border);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(16px);
+  flex-shrink: 0;
+}
+.chat-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+.chat-topbar-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-md);
+  background: var(--grad-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 12px var(--clr-accent-glow);
+}
+.chat-topbar-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.chat-topbar-sub {
+  font-size: 0.72rem;
+  color: var(--clr-text-muted);
+}
+.chat-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.chat-topbar-status {
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+}
+
+/* Messages container */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-lg) var(--sp-xl);
+  gap: 0;
+  scroll-behavior: smooth;
+}
+
+/* Hero state */
+.chat-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--sp-2xl) var(--sp-lg);
+  gap: var(--sp-md);
+}
+.chat-hero-orb {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(108,99,255,0.3), rgba(155,89,182,0.2));
+  border: 1px solid rgba(108,99,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-violet);
+  box-shadow: 0 0 30px rgba(108,99,255,0.3);
+  animation: orbFloat 6s ease-in-out infinite;
+}
+.chat-hero-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.chat-hero-sub {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+/* History wrapper */
+.chat-history {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

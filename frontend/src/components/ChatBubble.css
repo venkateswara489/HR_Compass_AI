@@ -1,0 +1,115 @@
+/* ChatBubble.css */
+.bubble-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: var(--sp-md);
+}
+.bubble-row--user { flex-direction: row-reverse; }
+.bubble-row--bot  { flex-direction: row; }
+
+/* Avatar */
+.bubble-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+.bubble-avatar--user {
+  background: var(--grad-brand);
+  box-shadow: 0 0 10px var(--clr-accent-glow);
+}
+.bubble-avatar--bot {
+  background: #EEF2FF;
+  border: 1px solid var(--clr-border-2);
+  color: var(--clr-violet);
+}
+
+/* Content wrapper */
+.bubble-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 78%;
+}
+.bubble-content--bot {
+  align-items: flex-start;
+}
+
+/* Bubble itself */
+.bubble {
+  border-radius: 18px;
+  padding: 0.8rem 1.1rem;
+  max-width: 100%;
+}
+.bubble--user {
+  background: var(--grad-brand);
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 18px rgba(108,99,255,0.40);
+}
+.bubble--bot {
+  background: #FFFFFF;
+  border: 1px solid var(--clr-border-2);
+  border-bottom-left-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.bubble-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--clr-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.bubble--user .bubble-text { color: #fff; }
+
+/* Typing bubble */
+.typing-bubble {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.9rem 1.2rem;
+}
+
+/* Sources */
+.bubble-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+/* Feedback */
+.bubble-feedback {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.feedback-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F2F5FF;
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text-faint);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-standard);
+}
+.feedback-btn:hover { background: #E5EBFF; color: var(--clr-text); }
+.feedback-btn--active-pos {
+  background: rgba(74,222,128,0.15);
+  border-color: rgba(74,222,128,0.5);
+  color: var(--clr-green);
+}
+.feedback-btn--active-neg {
+  background: rgba(248,113,113,0.15);
+  border-color: rgba(248,113,113,0.5);
+  color: var(--clr-red);
+}

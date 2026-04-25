@@ -1,0 +1,27 @@
+# Core RAG Pipeline
+faiss-cpu==1.8.0
+sentence-transformers==3.0.1
+langchain==0.2.16
+langchain-community==0.2.16
+
+# Document Loading
+pdfplumber==0.11.4
+PyPDF2==3.0.1
+python-docx==1.1.2
+
+# LLM Integration (OpenAI — can be swapped for HuggingFace)
+openai==1.40.0
+
+# Hybrid Search (BM25)
+rank-bm25==0.2.2
+
+# UI (legacy Streamlit — kept for reference)
+streamlit==1.37.1
+
+# REST API (React frontend)
+flask==3.0.3
+flask-cors==4.0.1
+
+# Utilities
+python-dotenv==1.0.1
+numpy==1.26.4
