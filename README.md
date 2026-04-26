@@ -1,106 +1,108 @@
-# HRCompassAI 🧭
+# HRCompassAI - Employee Policy Retrieval Assistant
 
-> A Retrieval-Augmented Generation (RAG) system for HR — providing **accurate, policy-grounded answers** from internal company documents using FAISS vector search and sentence embeddings. Supports both a Streamlit UI and a React + Flask frontend.
+RAG assistant for HR policies using:
+- Python (Flask backend)
+- React (Frontend)
+- FAISS
+- Sentence Transformers
+- Ollama (`llama3` or `mistral`)
 
----
+## Project Structure
 
-## 🚀 Quick Start
+```
+HRCompassAI/
+├── app.py                 # Flask backend API
+├── embeddings.py          # Document embedding generation
+├── retriever.py           # FAISS retrieval logic
+├── system_llm.py          # Ollama-based answer generation
+├── utils.py               # Shared utility functions
+├── config.py              # Configuration settings
+├── requirements.txt       # Python dependencies
+├── documents/             # Uploaded HR policy files
+├── vector_store/          # FAISS index and metadata
+└── frontend/              # React frontend
+    ├── package.json
+    ├── src/
+    └── node_modules/
+```
 
-### 1. Install dependencies
+## Features
+
+- Multi-document upload (`.pdf`, `.docx`, `.txt`)
+- Chunking with overlap (`chunk_size` 300-500, overlap 50 by default)
+- Embedding model: `all-MiniLM-L6-v2`
+- FAISS retrieval (`top_k=3`) with similarity threshold filtering
+- Ollama grounded answer generation (temperature `0.0`)
+- Strict no-hallucination prompt
+- "Not available in policy" fallback
+- Chat history via Streamlit session state
+- Output format:
+  - Answer
+  - Source
+  - Confidence
+
+## Run Instructions
+
+### 1) Install dependencies
+
+**Backend (Python):**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. (Optional) Configure OpenAI API key
+**Frontend (Node.js):**
 ```bash
-copy .env.example .env
-# Edit .env and add your OPENAI_API_KEY
-```
-> The app can still answer questions without an API key using local extraction from retrieved policy text.
-
-### 3. Run the Streamlit app
-```bash
-streamlit run app.py
-```
-
-### 4. Run the React frontend + Flask API
-```bash
-python api.py
 cd frontend
 npm install
+```
+
+### 2) Install and Setup Ollama
+
+Install Ollama from https://ollama.com, then pull the model:
+
+```bash
+ollama pull llama3
+# or
+ollama pull mistral
+```
+
+### 3) Start Ollama Service
+
+**IMPORTANT: Ollama must be running before starting the app.**
+
+```bash
+ollama serve
+```
+
+This starts the Ollama server on `http://localhost:11434`. Keep this terminal open.
+
+### 4) Start Flask Backend
+
+In a new terminal, run:
+
+```bash
+python app.py
+```
+
+This starts the Flask API on `http://localhost:5000`. Keep this terminal open.
+
+### 5) Start React Frontend
+
+In another new terminal, run:
+
+```bash
+cd frontend
 npm run dev
 ```
-> The React app communicates with the backend at `http://localhost:5000`.
 
----
+This starts the React frontend (usually on `http://localhost:5173`).
 
-## 🏗️ Project Structure
+### 6) Use the app
 
-```
-HRCompassAI/
-├── app.py              # Streamlit UI + chat interface
-├── api.py              # Flask REST API for the React frontend
-├── config.py           # Central settings, paths, roles, and thresholds
-├── embeddings.py       # Document loading, chunking, embedding generation
-├── retriever.py        # FAISS index, BM25 search, role filtering, confidence scoring
-├── system_llm.py       # LLM answer generation and fallback extraction
-├── admin.py            # Admin document upload/delete/rebuild logic
-├── requirements.txt    # Python dependencies
-├── .env.example        # Example environment variables
-├── data/
-│   ├── documents/      # Upload your HR policy files here
-│   └── vector_store/   # Auto-generated FAISS index files
-└── frontend/           # React + Vite frontend
-    ├── package.json
-    └── src/
-```
+1. Open your browser to the frontend URL (e.g., `http://localhost:5173`)
+2. Upload HR policy files in the admin panel.
+3. Click **Build / Refresh Index**.
+4. Ask policy questions in the query box.
 
----
 
-## 🔑 Key Features
-
-| Feature | Description |
-|---|---|
-| 🔍 Hybrid Search | FAISS semantic search + BM25 keyword ranking |
-| 📄 Source Attribution | Answers include source document and page metadata |
-| 📊 Confidence Score | Visual confidence bar and label for each response |
-| 🚫 Grounded Answers | Returns “not available” if the top result is below threshold |
-| 👔 Role-Based Access | Employee / Manager / HR roles filter policy categories |
-| 💬 Chat History | Session-level conversation memory in Streamlit UI |
-| 👍👎 Feedback | Rate answers as helpful or not helpful |
-| 🔧 Admin Controls | Upload/delete documents and rebuild index without restart |
-| 💡 Optional LLM | Uses OpenAI when the key is set, otherwise local extraction |
-
----
-
-## 📚 Architecture
-
-```
-User Question -> Retrieval -> Context Selection -> Answer Generation
-
-UI: Streamlit app or React frontend
-Backend: Flask API or Streamlit direct integration
-Retriever: FAISS + BM25 + role filtering
-LLM: OpenAI (optional) or local context extraction
-```
-
----
-
-## 📝 Notes
-
-- `data/documents/` stores uploaded policy files.
-- `data/vector_store/` contains `hr_faiss.index` and `hr_metadata.json`.
-- The React frontend lives in `frontend/` and consumes `api.py`.
-- If `OPENAI_API_KEY` is not provided, the app falls back to rule-based extraction from retrieved text.
-
----
-
-## 🎓 Key Points (for Viva)
-
-- *"This system uses FAISS for fast approximate nearest-neighbour similarity search."*
-- *"We use sentence-transformers to capture semantic meaning beyond keywords."*
-- *"Overlapping chunking (300 chars, 50 overlap) improves retrieval accuracy."*
-- *"The LLM is strictly instructed to use only retrieved context — preventing hallucination."*
-- *"Hybrid BM25 + FAISS search combines lexical and semantic matching."*
-- *"Role-based access control ensures employees only see policies relevant to them."*
-- *"This is a Retrieval-Augmented Generation (RAG) system."*
+**Note:** The FAISS index is saved in `vector_store/`, so you don't need to rebuild it after restarting the app unless you upload new documents.

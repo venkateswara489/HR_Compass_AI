@@ -1,0 +1,92 @@
+[
+  {
+    "text": "HRCompassAI — Sample HR Policy Document ========================================= COMPANY: Acme Corporation DOCUMENT: Employee HR Policy Manual VERSION: 2.1 | DATE: January 2025 ======================================== SECTION 1: LEAVE POLICY ======================================== 1.1 Annual Leave Employees are entitled to 21 days of paid annual leave per calendar year. Leave must be applied for at least 7 days in advance using the HR portal.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 0
+  },
+  {
+    "text": "r at least 7 days in advance using the HR portal. Unused annual leave can be carried forward up to a maximum of 10 days into the next calendar year. Encashment of leave is allowed only at the time of separation. 1.2 Sick Leave Employees are entitled to 12 days of paid sick leave per year. A medical certificate from a registered physician is required for sick leave exceeding 3 consecutive days. Sick leave cannot be carried forward or encashed.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 1
+  },
+  {
+    "text": "Sick leave cannot be carried forward or encashed. 1.3 Maternity Leave Female employees who have completed at least one year of service are entitled to 26 weeks of paid maternity leave for the first two children. For subsequent children, 12 weeks of paid maternity leave is available. 1.4 Paternity Leave Male employees are entitled to 7 days of paid paternity leave, to be availed within 3 months of the child's birth.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 2
+  },
+  {
+    "text": "be availed within 3 months of the child's birth. 1.5 Casual Leave Employees are entitled to 6 days of casual leave per year. Casual leave cannot be clubbed with other leave types and cannot be availed for more than 3 consecutive days. ======================================== SECTION 2: CODE OF CONDUCT ======================================== 2.1 Professional Behaviour All employees are expected t",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 3
+  },
+  {
+    "text": "rofessional Behaviour All employees are expected to maintain professional conduct in the workplace and in all company-related communications. Harassment, discrimination, or bullying of any kind will not be tolerated. 2.2 Dress Code Business casual attire is required Monday to Thursday. Fridays are casual dress days. Client-facing meetings require formal business attire unless otherwise specified.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 4
+  },
+  {
+    "text": "ormal business attire unless otherwise specified. 2.3 Conflict of Interest Employees must disclose any potential conflicts of interest to their manager and the HR department in writing within 14 days of becoming aware of the conflict. 2.4 Confidentiality All employees are bound by confidentiality agreements. Company data, client information, and proprietary processes must not be shared with unauthorised parties.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 5
+  },
+  {
+    "text": "ses must not be shared with unauthorised parties. ======================================== SECTION 3: BENEFITS ======================================== 3.1 Health Insurance The company provides group health insurance covering the employee, their spouse, and up to two children. The sum insured is INR 5,00,000 per family per year. Premiums are fully paid by the company. 3.2 Provident Fund Employees contribute 12% of their basic salary to the Employee Provident Fund (EPF).",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 6
+  },
+  {
+    "text": "asic salary to the Employee Provident Fund (EPF). The company matches this contribution at 12%. 3.3 Gratuity Employees completing 5 or more years of continuous service are entitled to gratuity as per the Payment of Gratuity Act. 3.4 Employee Assistance Programme (EAP) All employees have access to the EAP, which provides free confidential counselling sessions (up to 6 per year) for personal and professional issues.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 7
+  },
+  {
+    "text": "6 per year) for personal and professional issues. ======================================== SECTION 4: PERFORMANCE MANAGEMENT ======================================== 4.1 Annual Appraisals Performance reviews are conducted annually, typically in March. Employees are rated on a 1–5 scale. A rating of 4 or above is considered \"Exceeds Expectations\" and qualifies for a performance bonus.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 8
+  },
+  {
+    "text": "ectations\" and qualifies for a performance bonus. 4.2 Performance Improvement Plan (PIP) Employees receiving a rating of 2 or below for two consecutive cycles will be placed on a 90-day PIP. Successful completion of the PIP is required for continued employment. 4.3 Promotions Promotions are performance-driven and require a minimum of 2 years in the current grade, a performance rating of 4+ in the last review cycle, and manager recommendation.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 9
+  },
+  {
+    "text": "he last review cycle, and manager recommendation. ======================================== SECTION 5: DISCIPLINARY POLICY ======================================== 5.1 Levels of Disciplinary Action Warning → Written Warning → Suspension (up to 5 days) → Termination. 5.2 Grounds for Immediate Termination Theft, fraud, workplace violence, serious breach of confidentiality, or being under the influenc",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 10
+  },
+  {
+    "text": "ch of confidentiality, or being under the influence of alcohol/drugs at work are grounds for immediate termination without notice. 5.3 Investigation Process All disciplinary proceedings are preceded by a formal investigation. The employee has the right to present their case and may be accompanied by a colleague (not a legal representative) during hearings.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 11
+  },
+  {
+    "text": "gue (not a legal representative) during hearings. ======================================== SECTION 6: REMOTE WORK POLICY ======================================== 6.1 Eligibility Employees who have completed their probation period (typically 6 months) are eligible for hybrid/remote work arrangements, subject to manager approval. 6.2 Work From Home (WFH) Days Employees may work from home up to 2 days per week by default.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 12
+  },
+  {
+    "text": "work from home up to 2 days per week by default. Additional WFH days can be granted on a case-by-case basis by the department head. 6.3 Equipment & Connectivity The company will provide a laptop and required software. Internet and electricity expenses for remote work are the responsibility of the employee unless otherwise agreed in writing.",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 13
+  },
+  {
+    "text": "the employee unless otherwise agreed in writing. ======================================== END OF DOCUMENT ========================================",
+    "source": "HR_Policy_Manual.txt",
+    "page": 1,
+    "chunk_index": 14
+  }
+]

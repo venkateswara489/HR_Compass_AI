@@ -36,6 +36,12 @@ DISTANCE_THRESHOLD = 2.0          # maximum L2 distance for acceptable matches -
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = "gpt-3.5-turbo"
 
+# Ollama model settings for local CPU usage
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3")
+OLLAMA_TEMPERATURE = float(os.getenv("OLLAMA_TEMPERATURE", "0.2"))
+OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "120"))
+OLLAMA_RETRIES = int(os.getenv("OLLAMA_RETRIES", "2"))
+
 # ── Role-Based Access ──────────────────────────────────────────────────────
 ROLES = {
     "Employee": ["General", "Leave", "Code of Conduct", "Benefits"],
