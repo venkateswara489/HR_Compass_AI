@@ -45,7 +45,6 @@ OLLAMA_RETRIES = int(os.getenv("OLLAMA_RETRIES", "2"))
 # ── Role-Based Access ──────────────────────────────────────────────────────
 ROLES = {
     "Employee": ["General", "Leave", "Code of Conduct", "Benefits"],
-    "Manager":  ["General", "Leave", "Code of Conduct", "Benefits", "Performance", "Disciplinary"],
     "HR":       None,   # None means unrestricted — sees everything
 }
 

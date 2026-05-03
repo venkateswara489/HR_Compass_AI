@@ -10,7 +10,6 @@ import './Sidebar.css'
 
 const ROLE_META = {
   Employee: { icon: <Users size={14} />, color: '#60A5FA', label: 'Employee' },
-  Manager:  { icon: <Shield size={14} />, color: '#A78BFA', label: 'Manager' },
   HR:       { icon: <Zap size={14} />, color: '#4ADE80', label: 'HR Admin' },
 }
 
@@ -104,7 +103,7 @@ export default function Sidebar({ role, setRole, chatCount, helpfulCount, onClea
               <p className="role-hint">
                 {role === 'HR'
                   ? '🔓 Full access — all policy categories'
-                  : `Access: General, Leave${role === 'Manager' ? ', Performance, Disciplinary' : ', Benefits, Code of Conduct'}`}
+                  : 'Access: General, Leave, Benefits, Code of Conduct'}
               </p>
             </motion.div>
           )}
